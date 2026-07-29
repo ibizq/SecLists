@@ -6971,6 +6971,7 @@ tests/integration/Core/Framework/MessageQueue/Api/MessageQueueEndpointTest.php
 tests/integration/Core/Framework/MessageQueue/Stats/MySQLStatsRepositoryTest.php
 tests/integration/Core/Framework/MessageQueue/ScheduledTask/Scheduler/TaskSchedulerTest.php
 tests/integration/Core/Framework/MessageQueue/ScheduledTask/ScheduledTaskHandlerTest.php
+tests/integration/Core/Framework/MessageQueue/ScheduledTask/Telemetry/ScheduledTaskHealthGatewayTest.php
 tests/integration/Core/Framework/MessageQueue/ScheduledTask/TaskRegistryTest.php
 tests/integration/Core/Framework/MessageQueue/ScheduledTask/RegisterScheduledTaskTest.php
 tests/integration/Core/Framework/MessageQueue/Subscriber/MessageQueueStatsSubscriberTest.php
@@ -7693,6 +7694,7 @@ tests/unit/Storefront/Controller/NavigationControllerTest.php
 tests/unit/Storefront/Controller/ContextGatewayControllerTest.php
 tests/unit/Storefront/Controller/RegisterControllerTest.php
 tests/unit/Storefront/Controller/fixtures/TestStorefrontController.php
+tests/unit/Storefront/Controller/WishlistControllerTest.php
 tests/unit/Storefront/Controller/Api/CaptchaControllerTest.php
 tests/unit/Storefront/Controller/CmsControllerTest.php
 tests/unit/Storefront/Controller/CartLineItemControllerTest.php
@@ -7756,6 +7758,7 @@ tests/unit/Storefront/Page/Account/Profile/AccountProfilePageLoaderTest.php
 tests/unit/Storefront/Page/Account/Login/AccountLoginPageLoaderTest.php
 tests/unit/Storefront/Page/Account/Order/AccountOrderPageLoaderTest.php
 tests/unit/Storefront/Page/Account/Order/AccountOrderEditPageLoaderTest.php
+tests/unit/Storefront/Page/Account/Order/AccountOrderDetailPageLoaderTest.php
 tests/unit/Storefront/Page/Product/ProductPageLoaderTest.php
 tests/unit/Storefront/Framework/Store/Subscriber/ExtensionThemeDetectionSubscriberTest.php
 tests/unit/Storefront/Framework/Twig/Extension/fixtures/Storefront/Resources/views/test/base.html.twig
@@ -7954,6 +7957,9 @@ tests/unit/Core/Test/Stub/Doctrine/QueryBuilderDataExtractorTest.php
 tests/unit/Core/Test/Stub/Doctrine/FakeResultFactoryTest.php
 tests/unit/Core/Test/Assert/SerializationTest.php
 tests/unit/Core/Test/Assert/StrictEmptyTest.php
+tests/unit/Core/Test/PHPUnit/CompletionGuard/CompletionGuardTest.php
+tests/unit/Core/Test/PHPUnit/CompletionGuard/Subscriber/MarkExecutionStartedSubscriberTest.php
+tests/unit/Core/Test/PHPUnit/CompletionGuard/Subscriber/MarkExecutionFinishedSubscriberTest.php
 tests/unit/Core/Test/PHPUnit/Extension/DatabaseDiff/DbStateTest.php
 tests/unit/Core/Test/PHPUnit/Extension/Datadog/TestRunnerExecutionFinishedSubscriberTest.php
 tests/unit/Core/Test/PHPUnit/Extension/Datadog/TestErroredSubscriberTest.php
@@ -8012,6 +8018,7 @@ tests/unit/Core/System/SalesChannel/Mcp/Tool/StoreApiToolsetsListToolTest.php
 tests/unit/Core/System/SalesChannel/Validation/SalesChannelValidatorTest.php
 tests/unit/Core/System/SalesChannel/StoreApiCustomFieldMapperTest.php
 tests/unit/Core/System/SalesChannel/Entity/DefinitionRegistryChainTest.php
+tests/unit/Core/System/SalesChannel/Entity/SalesChannelRepositoryTest.php
 tests/unit/Core/System/SalesChannel/Entity/SalesChannelDefinitionInstanceRegistryTest.php
 tests/unit/Core/System/SalesChannel/Subscriber/SalesChannelMaintenanceIpAllowlistSyncSubscriberTest.php
 tests/unit/Core/System/SalesChannel/Subscriber/SalesChannelTypeValidatorTest.php
@@ -8561,6 +8568,7 @@ tests/unit/Core/Checkout/Document/Api/DocumentTypeTechnicalNameFkResolverTest.ph
 tests/unit/Core/Checkout/Document/Zugferd/ZugferdBuilderTest.php
 tests/unit/Core/Checkout/Document/Zugferd/ZugferdDocumentMock.php
 tests/unit/Core/Checkout/Document/Zugferd/ZugferdDocumentTest.php
+tests/unit/Core/Checkout/Document/Aggregate/DocumentBaseConfig/DocumentBaseConfigValidatorTest.php
 tests/unit/Core/Checkout/Document/Renderer/ZugferdEmbeddedCreditNoteRendererTest.php
 tests/unit/Core/Checkout/Document/Renderer/ZugferdCreditNoteRendererTest.php
 tests/unit/Core/Checkout/Document/Renderer/ZugferdCancellationInvoiceRendererTest.php
@@ -9419,6 +9427,7 @@ tests/unit/Core/Framework/DataAbstractionLayer/Indexing/EntityIndexerRegistryTes
 tests/unit/Core/Framework/DataAbstractionLayer/Indexing/MessageQueue/FullEntityIndexerMessageTest.php
 tests/unit/Core/Framework/DataAbstractionLayer/Indexing/MessageQueue/IterateEntityIndexerMessageTest.php
 tests/unit/Core/Framework/DataAbstractionLayer/Indexing/EntityIndexingMessageTest.php
+tests/unit/Core/Framework/DataAbstractionLayer/Indexing/Telemetry/IndexerMetricsInstrumentorTest.php
 tests/unit/Core/Framework/DataAbstractionLayer/Indexing/Subscriber/EntityIndexingSubscriberTest.php
 tests/unit/Core/Framework/DataAbstractionLayer/Indexing/Subscriber/RegisteredIndexerSubscriberTest.php
 tests/unit/Core/Framework/DataAbstractionLayer/EntityWriteResultCollectionTest.php
@@ -9429,6 +9438,8 @@ tests/unit/Core/Framework/DataAbstractionLayer/Exception/PropertyNotFoundExcepti
 tests/unit/Core/Framework/DataAbstractionLayer/Exception/InvalidEntityUuidExceptionTest.php
 tests/unit/Core/Framework/DataAbstractionLayer/Attribute/PasswordTest.php
 tests/unit/Core/Framework/DataAbstractionLayer/Telemetry/EntityTelemetrySubscriberTest.php
+tests/unit/Core/Framework/DataAbstractionLayer/Telemetry/EntityGroupResolverTest.php
+tests/unit/Core/Framework/DataAbstractionLayer/Telemetry/DalSearchInstrumentorTest.php
 tests/unit/Core/Framework/DataAbstractionLayer/Validation/Fixtures/DefinitionStub.php
 tests/unit/Core/Framework/DataAbstractionLayer/Validation/Fixtures/DefinitionWithNonStorageAwarePrimaryKeyStub.php
 tests/unit/Core/Framework/DataAbstractionLayer/Validation/EntityNotExistsTest.php
@@ -9515,6 +9526,10 @@ tests/unit/Core/Framework/Routing/RouteParamsCleanupListenerTest.php
 tests/unit/Core/Framework/Routing/CanonicalRedirectServiceTest.php
 tests/unit/Core/Framework/Routing/Event/MaintenanceModeRequestEventTest.php
 tests/unit/Core/Framework/Routing/RoutingExceptionTest.php
+tests/unit/Core/Framework/Routing/Telemetry/AreaResolverTest.php
+tests/unit/Core/Framework/Routing/Telemetry/DomainResolverTest.php
+tests/unit/Core/Framework/Routing/Telemetry/HttpRequestMetricSubscriberTest.php
+tests/unit/Core/Framework/Routing/Telemetry/OperationResolverTest.php
 tests/unit/Core/Framework/Routing/Validation/RouteBlocklistServiceTest.php
 tests/unit/Core/Framework/Routing/Validation/Constraint/RouteNotBlockedValidatorTest.php
 tests/unit/Core/Framework/Routing/CoreSubscriberTest.php
@@ -9537,7 +9552,11 @@ tests/unit/Core/Framework/MessageQueue/ScheduledTask/ScheduledTaskHandlerTest.ph
 tests/unit/Core/Framework/MessageQueue/ScheduledTask/SymfonyBridge/ScheduleProviderTest.php
 tests/unit/Core/Framework/MessageQueue/ScheduledTask/ScheduledTaskExecutorTest.php
 tests/unit/Core/Framework/MessageQueue/ScheduledTask/Registry/TaskRegistryTest.php
+tests/unit/Core/Framework/MessageQueue/ScheduledTask/Telemetry/ScheduledTaskHealthCollectorTest.php
+tests/unit/Core/Framework/MessageQueue/Telemetry/MessageGroupResolverTest.php
 tests/unit/Core/Framework/MessageQueue/Telemetry/MessageQueueTelemetrySubscriberTest.php
+tests/unit/Core/Framework/MessageQueue/Telemetry/MessengerQueueDepthCollectorTest.php
+tests/unit/Core/Framework/MessageQueue/Telemetry/WorkerMessageTimingHelperTest.php
 tests/unit/Core/Framework/MessageQueue/Service/MessageSizeCalculatorTest.php
 tests/unit/Core/Framework/MessageQueue/MessageHandlerCompilerPassTest.php
 tests/unit/Core/Framework/MessageQueue/SendEmailMessageJsonSerializerTest.php
@@ -10196,6 +10215,8 @@ tests/unit/Core/Framework/Telemetry/Metrics/Transport/TransportCollectionTest.ph
 tests/unit/Core/Framework/Telemetry/Metrics/Subscriber/TelemetryFlushListenerTest.php
 tests/unit/Core/Framework/Telemetry/Metrics/MeterProviderTest.php
 tests/unit/Core/Framework/Telemetry/TelemetryExceptionTest.php
+tests/unit/Core/Framework/Telemetry/Doctrine/QueryCounterTest.php
+tests/unit/Core/Framework/Telemetry/Doctrine/QueryCountMiddlewareTest.php
 tests/unit/Core/Framework/Validation/HappyPathValidatorTest.php
 tests/unit/Core/Framework/Validation/DataValidationDefinitionTest.php
 tests/unit/Core/Framework/Validation/ValidatorFactoryTest.php
@@ -10225,6 +10246,7 @@ tests/unit/Core/Framework/Notification/NotificationServiceTest.php
 tests/unit/Core/Framework/ShopwareHttpExceptionTest.php
 tests/unit/Core/Framework/Demodata/Command/DemodataCommandTest.php
 tests/unit/Core/Framework/Demodata/Generator/ProductGeneratorTest.php
+tests/unit/Core/Framework/Demodata/Generator/MediaGeneratorTest.php
 tests/unit/Core/Framework/Demodata/Generator/NewsletterRecipientGeneratorTest.php
 tests/unit/Core/Framework/Demodata/Faker/CommerceTest.php
 tests/unit/Core/Framework/Demodata/DemodataServiceTest.php
@@ -14305,6 +14327,9 @@ src/Core/Test/Constraint/StrictIsEmpty.php
 src/Core/Test/Assert/Serialization.php
 src/Core/Test/Assert/StrictEmpty.php
 src/Core/Test/Annotation/DisabledFeatures.php
+src/Core/Test/PHPUnit/CompletionGuard/CompletionGuard.php
+src/Core/Test/PHPUnit/CompletionGuard/Subscriber/MarkExecutionFinishedSubscriber.php
+src/Core/Test/PHPUnit/CompletionGuard/Subscriber/MarkExecutionStartedSubscriber.php
 src/Core/Test/PHPUnit/Extension/DatabaseDiff/DatabaseDiffExtension.php
 src/Core/Test/PHPUnit/Extension/DatabaseDiff/Subscriber/BeforeTestMethodCalledSubscriber.php
 src/Core/Test/PHPUnit/Extension/DatabaseDiff/Subscriber/TestFinishedSubscriber.php
@@ -15509,6 +15534,7 @@ src/Core/Checkout/Document/Aggregate/DocumentBaseConfigSalesChannel/DocumentBase
 src/Core/Checkout/Document/Aggregate/DocumentBaseConfigSalesChannel/DocumentBaseConfigSalesChannelCollection.php
 src/Core/Checkout/Document/Aggregate/DocumentBaseConfig/DocumentBaseConfigDefinition.php
 src/Core/Checkout/Document/Aggregate/DocumentBaseConfig/DocumentBaseConfigEntity.php
+src/Core/Checkout/Document/Aggregate/DocumentBaseConfig/DocumentBaseConfigValidator.php
 src/Core/Checkout/Document/Aggregate/DocumentBaseConfig/DocumentBaseConfigCollection.php
 src/Core/Checkout/Document/Aggregate/DocumentType/DocumentTypeCollection.php
 src/Core/Checkout/Document/Aggregate/DocumentType/DocumentTypeEntity.php
@@ -17561,6 +17587,7 @@ src/Core/Framework/DataAbstractionLayer/Indexing/ChildCountUpdater.php
 src/Core/Framework/DataAbstractionLayer/Indexing/EntityIndexer.php
 src/Core/Framework/DataAbstractionLayer/Indexing/InheritanceUpdater.php
 src/Core/Framework/DataAbstractionLayer/Indexing/EntityIndexerRegistry.php
+src/Core/Framework/DataAbstractionLayer/Indexing/Telemetry/IndexerMetricsInstrumentor.php
 src/Core/Framework/DataAbstractionLayer/Indexing/EntityIndexingMessage.php
 src/Core/Framework/DataAbstractionLayer/Indexing/Subscriber/RegisteredIndexerSubscriber.php
 src/Core/Framework/DataAbstractionLayer/Indexing/Subscriber/EntityIndexingSubscriber.php
@@ -17637,6 +17664,8 @@ src/Core/Framework/DataAbstractionLayer/Attribute/ManyToMany.php
 src/Core/Framework/DataAbstractionLayer/Attribute/Serialized.php
 src/Core/Framework/DataAbstractionLayer/AttributeMappingDefinition.php
 src/Core/Framework/DataAbstractionLayer/Telemetry/EntityTelemetrySubscriber.php
+src/Core/Framework/DataAbstractionLayer/Telemetry/EntityGroupResolver.php
+src/Core/Framework/DataAbstractionLayer/Telemetry/DalSearchInstrumentor.php
 src/Core/Framework/DataAbstractionLayer/Validation/EntityExists.php
 src/Core/Framework/DataAbstractionLayer/Validation/EntityNotExistsValidator.php
 src/Core/Framework/DataAbstractionLayer/Validation/EntityExistsValidator.php
@@ -17863,6 +17892,10 @@ src/Core/Framework/Routing/AbstractRouteScope.php
 src/Core/Framework/Routing/Exception/CustomerNotLoggedInRoutingException.php
 src/Core/Framework/Routing/Exception/InvalidRouteScopeException.php
 src/Core/Framework/Routing/Exception/SalesChannelNotFoundException.php
+src/Core/Framework/Routing/Telemetry/AreaResolver.php
+src/Core/Framework/Routing/Telemetry/OperationResolver.php
+src/Core/Framework/Routing/Telemetry/DomainResolver.php
+src/Core/Framework/Routing/Telemetry/HttpRequestMetricSubscriber.php
 src/Core/Framework/Routing/Validation/RouteBlocklistService.php
 src/Core/Framework/Routing/Validation/Constraint/RouteNotBlocked.php
 src/Core/Framework/Routing/Validation/Constraint/RouteNotBlockedValidator.php
@@ -17909,9 +17942,14 @@ src/Core/Framework/MessageQueue/ScheduledTask/Registry/TaskRegistry.php
 src/Core/Framework/MessageQueue/ScheduledTask/ScheduledTask.php
 src/Core/Framework/MessageQueue/ScheduledTask/README.md
 src/Core/Framework/MessageQueue/ScheduledTask/ScheduledTaskDefinition.php
+src/Core/Framework/MessageQueue/ScheduledTask/Telemetry/ScheduledTaskHealthGateway.php
+src/Core/Framework/MessageQueue/ScheduledTask/Telemetry/ScheduledTaskHealthCollector.php
 src/Core/Framework/MessageQueue/ScheduledTask/DynamicallyScheduledTaskHandler.php
 src/Core/Framework/MessageQueue/ScheduledTask/ScheduledTaskEntity.php
 src/Core/Framework/MessageQueue/ScheduledTask/ScheduledTaskMessageInterface.php
+src/Core/Framework/MessageQueue/Telemetry/MessengerQueueDepthCollector.php
+src/Core/Framework/MessageQueue/Telemetry/MessageGroupResolver.php
+src/Core/Framework/MessageQueue/Telemetry/WorkerMessageTimingHelper.php
 src/Core/Framework/MessageQueue/Telemetry/MessageQueueTelemetrySubscriber.php
 src/Core/Framework/MessageQueue/Service/MessageSizeCalculator.php
 src/Core/Framework/MessageQueue/MessageHandlerCompilerPass.php
@@ -19232,6 +19270,11 @@ src/Core/Framework/Telemetry/Metrics/Metric/Metric.php
 src/Core/Framework/Telemetry/Metrics/Transport/TransportCollection.php
 src/Core/Framework/Telemetry/Metrics/Subscriber/TelemetryFlushListener.php
 src/Core/Framework/Telemetry/Telemetry.php
+src/Core/Framework/Telemetry/Doctrine/QueryCounter.php
+src/Core/Framework/Telemetry/Doctrine/QueryCountDriver.php
+src/Core/Framework/Telemetry/Doctrine/QueryCountConnection.php
+src/Core/Framework/Telemetry/Doctrine/QueryCountStatement.php
+src/Core/Framework/Telemetry/Doctrine/QueryCountMiddleware.php
 src/Core/Framework/Validation/Api/EmailValidationController.php
 src/Core/Framework/Validation/DataValidator.php
 src/Core/Framework/Validation/DataValidationFactoryInterface.php
@@ -19350,6 +19393,7 @@ src/Core/Framework/Deprecation/BCChange/ReturnTypeNarrowing.php
 src/Core/Framework/Deprecation/BCChange/BecomesAbstract.php
 src/Core/Framework/Deprecation/BCChange/ParameterRemoval.php
 src/Core/Framework/Deprecation/BCChange/ParameterTypeWidening.php
+src/Core/Framework/Deprecation/BCChange/ParameterDefaultValueChange.php
 src/Core/Framework/Deprecation/BCChange/BecomesInternal.php
 src/Core/Framework/Deprecation/BCChange/ExtenderCompatibilityChange.php
 src/Core/Framework/Deprecation/BCChange/ReturnTypeWidening.php
@@ -20834,6 +20878,9 @@ src/Administration/Resources/app/administration/src/module/sw-cms/elements/sideb
 src/Administration/Resources/app/administration/src/module/sw-cms/elements/sidebar-filter/preview/sw-cms-el-preview-sidebar-filter.html.twig
 src/Administration/Resources/app/administration/src/module/sw-cms/elements/sidebar-filter/preview/index.js
 src/Administration/Resources/app/administration/src/module/sw-cms/elements/sidebar-filter/sidebar-filter.spec.js
+src/Administration/Resources/app/administration/src/module/sw-cms/elements/product-listing/config/config.spec/fixtures.js
+src/Administration/Resources/app/administration/src/module/sw-cms/elements/product-listing/config/config.spec/sorting.spec.js
+src/Administration/Resources/app/administration/src/module/sw-cms/elements/product-listing/config/config.spec/filter.spec.js
 src/Administration/Resources/app/administration/src/module/sw-cms/elements/product-listing/config/components/sw-cms-el-config-product-listing-config-sorting-grid/sw-cms-el-config-product-listing-config-sorting-grid.scss
 src/Administration/Resources/app/administration/src/module/sw-cms/elements/product-listing/config/components/sw-cms-el-config-product-listing-config-sorting-grid/sw-cms-el-config-product-listing-config-sorting-grid.html.twig
 src/Administration/Resources/app/administration/src/module/sw-cms/elements/product-listing/config/components/sw-cms-el-config-product-listing-config-sorting-grid/sw-cms-el-config-product-listing-config-sorting-grid.spec.js
@@ -20843,7 +20890,6 @@ src/Administration/Resources/app/administration/src/module/sw-cms/elements/produ
 src/Administration/Resources/app/administration/src/module/sw-cms/elements/product-listing/config/components/sw-cms-el-config-product-listing-config-delete-modal/sw-cms-el-config-product-listing-config-delete-modal.spec.js
 src/Administration/Resources/app/administration/src/module/sw-cms/elements/product-listing/config/components/sw-cms-el-config-product-listing-config-delete-modal/index.js
 src/Administration/Resources/app/administration/src/module/sw-cms/elements/product-listing/config/sw-cms-el-config-product-listing.scss
-src/Administration/Resources/app/administration/src/module/sw-cms/elements/product-listing/config/config.spec.js
 src/Administration/Resources/app/administration/src/module/sw-cms/elements/product-listing/config/sw-cms-el-config-product-listing.html.twig
 src/Administration/Resources/app/administration/src/module/sw-cms/elements/product-listing/config/index.js
 src/Administration/Resources/app/administration/src/module/sw-cms/elements/product-listing/component/component.spec.js
